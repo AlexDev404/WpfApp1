@@ -36,6 +36,8 @@ namespace WpfApp1 {
             MessageBox::Show("Button Clicked!");
         }
         void AttachLoadedHandler(FrameworkElement^ frameworkElement) {
+            // Assign dynamicWindow to its correct value
+            this->dynamicWindow = frameworkElement;
             // Attach the event handler
             frameworkElement->Loaded += gcnew RoutedEventHandler(this, &WpfApp1::Bootup::OnLoaded);
         }
